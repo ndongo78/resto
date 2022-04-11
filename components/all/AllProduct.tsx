@@ -9,7 +9,7 @@ import {BarMenu} from "../BarMenu";
 import {CartContext} from "../../context/cart";
 
 export  const AllProduct = () => {
-  const {cart, total, totalPrice, setCart, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
+  const {cart, total, totalPrice, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
 
   return (
     <div className={styles.container}>

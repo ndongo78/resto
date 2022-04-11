@@ -8,7 +8,7 @@ import {CartContext} from "../../context/cart"
 const Header = () => {
   const [search, setSearch] = React.useState<string>("")
   const btn=useRef<HTMLInputElement>(null)
-  const {cart, total, totalPrice, setCart, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
+  const {cart, total, totalPrice,  setTotal, setTotalPrice, addToCart} = useContext(CartContext)
 
   const handleClick=()=>{
     // bt.style.width= "200px";
