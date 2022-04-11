@@ -37,7 +37,7 @@ const Notfound = () => {
         <Link href="/">
           <a style={{ color: "#fafafa", textDecoration: "none" }}>
             <AiOutlineArrowLeft size={50} color={"#dddd"} />
-            Retourner à l'accueil
+            Back to home
           </a>
         </Link>
       </button>

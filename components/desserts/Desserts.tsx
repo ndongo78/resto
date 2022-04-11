@@ -16,7 +16,7 @@ export const Desserts = () => {
          <div className={styles.containerItem}>
            {
             allProduct.map(item => (
-                <div className={styles.item}>
+                <div key={item.id} className={styles.item}>
                     <div className={styles.img}>
                         <Image src={item.image} alt={item.name} width={100} height={100}/>
                     </div>
@@ -27,7 +27,7 @@ export const Desserts = () => {
                              Sauces:
                               {
                                 item.sauces.map(sauce => (
-                                  <span className={styles.sauce}> {sauce} </span>
+                                  <span key={sauce} className={styles.sauce}> {sauce} </span>
                                 ))
                               }
                             </div>
