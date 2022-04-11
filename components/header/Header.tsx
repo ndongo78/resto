@@ -9,18 +9,22 @@ const Header = () => {
   const [search, setSearch] = React.useState<string>("")
   const btn=useRef(null)
   const {cart, total, totalPrice, setCart, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
- console.log(cart);
+
 
   const handleClick=()=>{
     //toggle class .with-search
     const bt=document.querySelector(".search-input")
     // bt.style.width= "200px";
+    if(btn.current != null){
     btn.current.style.width= "200px";
+    }
   }
 
   const hideInput=()=>{
+    if(btn.current != null){
    btn.current.style.width= 0;
    setSearch("")
+    }
   }
   const handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
     setSearch(e.target.value)
