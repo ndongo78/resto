@@ -5,7 +5,6 @@ const initialState:CartContext = {
     cart: [],
     total: 0,
     totalPrice: 0,
-    setCart: () => {},
     setTotal: function (total: number): void {
         throw new Error('Function not implemented.');
     },
@@ -21,7 +20,6 @@ interface CartContext {
     cart: Cart;
     total: number;
     totalPrice: number;
-    setCart: () => void;
     setTotal: (total: number) => void;
     setTotalPrice: (totalPrice: number) => void;
     addToCart: (product: SingleProduct) => void;
