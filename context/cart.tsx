@@ -1,13 +1,11 @@
 import React,{createContext} from 'react'
-import {SingleProduct} from "../types"
+import {Cart, SingleProduct} from "../types"
 
 const initialState:CartContext = {
     cart: [],
     total: 0,
     totalPrice: 0,
-    setCart: function (cart: {}[]): void {
-        throw new Error('Function not implemented.');
-    },
+    setCart: () => {},
     setTotal: function (total: number): void {
         throw new Error('Function not implemented.');
     },
@@ -20,10 +18,10 @@ const initialState:CartContext = {
 
 }
 interface CartContext {
-    cart: {};
+    cart: Cart;
     total: number;
     totalPrice: number;
-    setCart: (cart: {}[]) => void;
+    setCart: () => void;
     setTotal: (total: number) => void;
     setTotalPrice: (totalPrice: number) => void;
     addToCart: (product: SingleProduct) => void;
@@ -49,7 +47,7 @@ const Cart = ({children}:Props) => {
   
     return (
     <CartContext.Provider value={{
-        cart, total, totalPrice, setCart, setTotal, 
+        cart, total, totalPrice,  setTotal, 
         setTotalPrice,addToCart
         }}>
         {children}

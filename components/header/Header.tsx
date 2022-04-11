@@ -10,7 +10,6 @@ const Header = () => {
   const btn=useRef<HTMLInputElement>(null)
   const {cart, total, totalPrice, setCart, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
 
-
   const handleClick=()=>{
     // bt.style.width= "200px";
     if(btn.current != null){
@@ -48,7 +47,7 @@ const Header = () => {
         <div className={styles.cartContainer}>
         <Link href="/cart">
           <>
-        <span className={styles.badge}>0</span>
+        <span className={styles.badge}> {cart.length} </span>
         <FiShoppingCart className={styles.cartIcon}/>
         </>
         </Link>
