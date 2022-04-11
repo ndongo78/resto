@@ -68,7 +68,18 @@ const Menu = () => {
              className='input-field'
              >
              <FormInput 
-            label="Telephone" 
+            label="Email" 
+            type="email" 
+            placeholder="Jhon@gmail.com" 
+            onChange={(e) => setPerson({ ...person, firstName: e.target.value })} 
+            value={person.firstName}
+             />
+             </div>
+             <div
+             className='input-field'
+             >
+             <FormInput 
+            label="Téléphone" 
             type="number" 
             placeholder="066778899" 
             onChange={(e) => setPerson({ ...person, firstName: e.target.value })} 

@@ -51,11 +51,13 @@
 }
 
 .banner {
-    width: 250px;
+    width: 300px;
     height: 200px;
     border-radius: 20px;
     background-color: #9683d6;
     position: relative;
+    right: 25px;
+    bottom: 10px;
 }
 
 .image {

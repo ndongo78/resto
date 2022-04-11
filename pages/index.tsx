@@ -62,8 +62,6 @@ const Home: NextPage = () => {
           {
             isDessert && <Desserts  />
           }
-          <div></div>
-          <hr style={{width:"100%",height:1}} />
          <Footer />
         </div>
         <div>

@@ -11,7 +11,7 @@ const Articles = () => {
        <Drawer />
         </div>
         <div className={styles.content}>
-          <p>article</p>
+          <p>block bientot disponible</p>
         </div>
       </main>
 

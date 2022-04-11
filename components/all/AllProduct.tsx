@@ -6,7 +6,6 @@ import Image  from 'next/image'
 import {AiOutlinePlus ,AiOutlineArrowRight} from "react-icons/ai";
 import Link from 'next/link';
 import {BarMenu} from "../BarMenu";
-import Fade from 'react-reveal/Fade';
 import {CartContext} from "../../context/cart";
 
 export  const AllProduct = () => {
@@ -19,8 +18,7 @@ export  const AllProduct = () => {
              <div className={styles.containerItem}>
                {
                 allProduct.map(item => (
-                  <Fade bottom>
-                    <div className={styles.item}>
+                    <div className='item' key={item.id}>
                         <div className={styles.img}>
                             <Image src={item.image} alt={item.name} width={100} height={100}/>
                         </div>
@@ -50,7 +48,6 @@ export  const AllProduct = () => {
                              </div>
                         </div>
                     </div>
-                  </Fade>
               ))
               }
           </div>

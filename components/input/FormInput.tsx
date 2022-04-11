@@ -17,7 +17,8 @@ export const FormInput = ({label,type,placeholder,value,onChange}:Props) => {
             color:'blueviolet',
             fontWeight:400,
             display: 'flex',
-            position: "relative"
+            position: "relative",
+            marginRight: "10px",
         }}
         ><span
         style={{
@@ -25,7 +26,7 @@ export const FormInput = ({label,type,placeholder,value,onChange}:Props) => {
             position: "absolute",
             right: "-7px",
         }}
-        >*</span> {label}: 
+        >*</span> {label}
         </label>
         <input type={type} 
          placeholder={placeholder}

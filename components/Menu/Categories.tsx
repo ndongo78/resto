@@ -95,7 +95,7 @@ const Categories = ({
         </button>
         <Link href="/">
             <a className={ isBurger ? styles.isActive :styles.link} onClick={handleBurger}>
-                <Image src="/images/burger.png" alt="burger" height={80} width={80} />
+                <Image src="/images/burgers/burger1.png" alt="burger" height={80} width={80} />
                 <span  className={styles.desc}> Burgers </span>
             </a>
         </Link>
@@ -126,7 +126,7 @@ const Categories = ({
         </div>
         <div className={styles.banner}>
             <div className={styles.image}>
-            <Image src="/images/burger.png" alt="banner" height={150} width={150}  />
+            <Image src="/images/burgers/burger2.png" alt="banner" height={150} width={150}  />
             </div>
             <div className={styles.containerFooter}>
                 <h3> -50% </h3>

@@ -4,7 +4,6 @@ import {BarMenu} from "../BarMenu";
 import {AiOutlinePlus ,AiOutlineArrowRight} from "react-icons/ai";
 import {GoSettings} from "react-icons/go";
 import {Burger} from "../../constants/Burger";
-import Fade from 'react-reveal/Fade';
 import Image  from 'next/image' 
 import Link from 'next/link';
 
@@ -16,8 +15,7 @@ export const Burgers = () => {
         <div className={styles.containerItem}>
                {
                 Burger.map(item => (
-                  <Fade bottom>
-                    <div className={styles.item}>
+                    <div className='item' key={item.id}>
                         <div className={styles.img}>
                             <Image src={item.image} alt={item.name} width={100} height={100}/>
                         </div>
@@ -47,7 +45,6 @@ export const Burgers = () => {
                              </div>
                         </div>
                     </div>
-                  </Fade>
               ))
               }
           </div>

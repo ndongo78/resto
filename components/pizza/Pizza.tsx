@@ -6,7 +6,6 @@ import {GoSettings} from "react-icons/go";
 import {pizza} from "../../constants/Pizza";
 import Image  from 'next/image' 
 import Link from 'next/link';
-import Fade from 'react-reveal/Fade';
 
 export const Pizza = () => {
   return (
@@ -16,8 +15,7 @@ export const Pizza = () => {
              <div className={styles.containerItem}>
                {
                 pizza.map(item => (
-                  <Fade bottom>
-                    <div className={styles.item}>
+                    <div className='item' key={item.id}>
                         <div className={styles.img}>
                             <Image src={item.image} alt={item.name} width={100} height={100}/>
                         </div>
@@ -49,7 +47,6 @@ export const Pizza = () => {
                              </div>
                         </div>
                     </div>
-                  </Fade>
               ))
               }
           </div>

@@ -5,12 +5,12 @@
     margin: 15px;
 }
 
-
 .containerItem {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
+
 .item {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -23,8 +23,20 @@
     position: relative;
     box-shadow: 1px 6px 5px 2px rgba(0,0,0,0.5);
     margin: 10px;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-duration: 3s;
 }
  
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .img {
     position: absolute;
