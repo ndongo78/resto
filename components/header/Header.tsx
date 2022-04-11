@@ -7,13 +7,11 @@ import {CartContext} from "../../context/cart"
 
 const Header = () => {
   const [search, setSearch] = React.useState<string>("")
-  const btn=useRef(null)
+  const btn=useRef<HTMLInputElement>(null)
   const {cart, total, totalPrice, setCart, setTotal, setTotalPrice, addToCart} = useContext(CartContext)
 
 
   const handleClick=()=>{
-    //toggle class .with-search
-    const bt=document.querySelector(".search-input")
     // bt.style.width= "200px";
     if(btn.current != null){
     btn.current.style.width= "200px";
@@ -22,7 +20,7 @@ const Header = () => {
 
   const hideInput=()=>{
     if(btn.current != null){
-   btn.current.style.width= 0;
+   btn.current.style.width= "0px";
    setSearch("")
     }
   }
