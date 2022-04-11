@@ -6,7 +6,6 @@ import {FormInput,Footer} from "../components";
 import {BiMap} from 'react-icons/bi';
 import {GiSmartphone} from 'react-icons/gi';
 import {AiOutlineGlobal} from 'react-icons/ai';
-import Slide from 'react-reveal/Slide';
 
 const Parametre = () => {
   const [person, setPerson] = React.useState({
@@ -31,7 +30,6 @@ const Parametre = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Slide left>
           <h2 style={{
             color:'blueviolet',
             margin:"25px",
@@ -39,8 +37,6 @@ const Parametre = () => {
             fontStyle:"italic",
             }}> Pour nous contacter 
             </h2>
-            </Slide>
-            <Slide right>
           <p
             style={{
               color:'blueviolet',
@@ -50,7 +46,6 @@ const Parametre = () => {
             }}>
           Veillez remplir le formulaire ci-dessous
           </p>
-          </Slide>
           <form >
             <div 
               style={{
