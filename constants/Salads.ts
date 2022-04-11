@@ -1,0 +1,60 @@
+import {AllProducts} from '../types';
+
+export const Salads:AllProducts = [
+    {
+        id: 1,
+        name: "Salade berger",
+        price: 15,
+        image:'/images/salades/salad1.png',
+        composition: "Salade melange, oignon, tomate, avocat, radis",
+        sauces: ["Vinaigrette"],
+    },
+    {
+        id: 2,
+        name: "Salade de bœuf",
+        price: 11,
+        image:'/images/salades/salad2.png',
+        composition: "Salade vert, tomate, emmental,  boeuf",
+        sauces: ["Vinaigrette ,","Ceasar"],
+    },
+    {
+        id: 3,
+        name: "Salade de thon",
+        price: 18,
+        image:'/images/salades/salad3.png',
+        composition: "Salade vert, tomate, thon, oignon, mais",
+        sauces: ["balsamique"],
+    },
+    {
+        id: 4,
+        name: "Salade niçoise",
+        price: 13,
+        image:'/images/salades/salad4.png',
+        composition: "Salade vert, tomate, emmental,  artichaut, oignon",
+        sauces: ["Vinaigrette ,","Ceasar"],
+    },
+    {
+        id: 5,
+        name: "Salade césar",
+        price: 15,
+        image:'/images/salades/salad7.png',
+        composition: "Salade vert, tomate, poulet, oignon",
+        sauces: ["Ceasar"],
+    },
+    {
+        id:6,
+        name: "Salade mixte",
+        price: 10,
+        image:'/images/salades/salad5.png',
+        composition: "Salade vert, tomate, avocat, oignon",
+        sauces: ["Vinaigrette ,","Ceasar"],
+    },
+    {
+        id: 7,
+        name: "Salade poulet",
+        price: 15,
+        image:'/images/salades/salad6.png',
+        composition: "Salade vert, tomate, poulet, oignon",
+        sauces: ["Vinaigrette ,","Ceasar"],
+    },
+];
