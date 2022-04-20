@@ -87,23 +87,24 @@ const Categories = ({
  
     useEffect(() => {
         if(animated.current){
-            animated.current.innerHTML = animated.current.textContent.replace(/\S/g, "<span className='letter'>$&</span>");
-        }  anime.timeline({loop: true})
-        .add({
-          targets: '.heding .letter',
-          scale: [4,1],
-          opacity: [0,1],
-          translateZ: 0,
-          easing: "easeOutExpo",
-          duration: 950,
-          delay: (el, i) => 70*i
-        }).add({
-          targets: '.heding',
-          opacity: 0,
-          duration: 1000,
-          easing: "easeOutExpo",
-          delay: 1000
-        });
+            animated.current.innerHTML =  animated.current.textContent.replace(/\S/g, "<span className='letter'>$&</span>");
+            anime.timeline({loop: true})
+            .add({
+              targets: '.heding .letter',
+              scale: [4,1],
+              opacity: [0,1],
+              translateZ: 0,
+              easing: "easeOutExpo",
+              duration: 950,
+              delay: (el, i) => 70*i
+            }).add({
+              targets: '.heding',
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1000
+            });
+        } 
     }, [])
 
 
