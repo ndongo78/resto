@@ -2,7 +2,7 @@ import React,{useRef,useEffect} from 'react'
 import styles from './Categorie.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import anime from "animejs";
+import anime from 'animejs'
 
 interface Props {
     setisAll: (value: boolean) => void
