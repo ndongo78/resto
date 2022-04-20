@@ -51,10 +51,10 @@
 }
 
 .banner {
-    width: 300px;
+    width: 380px;
     height: 200px;
     border-radius: 20px;
-    background-color: #9683d6;
+    background-color: #ab97f3;
     position: relative;
     right: 25px;
     bottom: 10px;
@@ -76,18 +76,19 @@
 }
 
 .containerFooter h3 {
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
     font-weight: 800;
     margin: 0;
     padding: 10px;
 }
 .containerFooter h4 {
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 900;
     margin: 0;
     padding: 10px;
+    letter-spacing: 1px;
 }
 .btns {
     background-color: transparent;

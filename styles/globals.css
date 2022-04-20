@@ -214,3 +214,13 @@ animation-fill-mode: forwards;
       transform: translateY(0);
   }
 }
+
+.heding {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.letter {
+  display: inline-block;
+  line-height: 1em;
+}

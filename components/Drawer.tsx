@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -10,6 +10,7 @@ import Head from "next/head";
 
 export const Drawer = () => {
     const router = useRouter()
+    const [isLogin,setisLogin] = useState<boolean>(false)
 
   return (
       <>
@@ -19,8 +20,10 @@ export const Drawer = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      <div className={styles.drawer}>
-         <h5>Bonjour John !</h5>
-          <div className={styles.drawer_header}>
+         {/* <h5>Bonjour John !</h5> */}
+         {
+              isLogin ? (
+            <div className={styles.drawer_header}>
             <Image
               src="/images/user.webp"
               alt="logo"
@@ -29,6 +32,16 @@ export const Drawer = () => {
             />
             <span className={styles.drawer_header_text}> John Doe </span>
           </div>
+              )
+              : (
+                <div
+                style={{
+                  marginTop: "50px",
+                }}
+                ></div>
+              )
+         }
+           
             <div className={styles.drawer_body}>
               <Link href="/" >
               <div className={router.asPath === "/" ? styles.active : styles.drawer_body_item}>
@@ -70,27 +83,48 @@ export const Drawer = () => {
                    </a>
                 </div>
               </Link>
-              <Link href="/profil" >
-              <div className={router.asPath === "/profil" ? styles.active : styles.drawer_body_item}>
-                <a className={router.asPath === "/profil" ? styles.drawer_link_active : styles.drawer_link}>
-                <span className={router.asPath === "/profil" ? styles.icon_active :styles.icon}>
-                <AiOutlineUser size={30} color={"#ddd5dddde"} />
-                </span>
+              {
+                isLogin ? ( 
+                <Link href="/profil" >
+                <div className={router.asPath === "/profil" ? styles.active : styles.drawer_body_item}>
+                  <a className={router.asPath === "/profil" ? styles.drawer_link_active : styles.drawer_link}>
+                  <span className={router.asPath === "/profil" ? styles.icon_active :styles.icon}>
+                  <AiOutlineUser size={30} color={"#ddd5dddde"} />
+                  </span>
                   Mon profil
                   </a>
               </div>
               </Link>
+                )
+                : (
+                  <Link href="/login" >
+                  <div className={router.asPath === "/login" ? styles.active : styles.drawer_body_item}>
+                    <a className={router.asPath === "/login" ? styles.drawer_link_active : styles.drawer_link}>
+                    <span className={router.asPath === "/login" ? styles.icon_active :styles.icon}>
+                    <AiOutlineUser size={30} color={"#ddd5dddde"} />
+                    </span>
+                    Se connecter
+                    </a>
+                </div>
+                </Link>
+                )
+              }
+             
           </div>
           <div className={styles.drawer_footer}> 
-          <div className={styles.circle1}></div>
           <div>
-           <Image src="/images/fast-delivery.png" alt="logo" width="130" height="130" />
+           <Image src="/images/fast-delivery.png" alt="logo" width="200" height="200" />
           </div>
-          <div className={styles.textCon}>
-            <h5>
+            <h5 
+            style={{
+              color: "#fff",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              colorScheme: "dark",
+              }}
+              >
               Nous vous livrons dans <br /> les plus brefs délais
             </h5>
-          </div>
           </div>
         </div>
         </>

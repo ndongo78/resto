@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import styles from './Categorie.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import anime from "animejs";
 
 interface Props {
     setisAll: (value: boolean) => void
@@ -82,6 +83,29 @@ const Categories = ({
         setisSalad(true)
     }
 
+    const animated = useRef<HTMLHeadingElement>(null)
+ 
+    useEffect(() => {
+        if(animated.current){
+            animated.current.innerHTML = animated.current.textContent.replace(/\S/g, "<span className='letter'>$&</span>");
+        }  anime.timeline({loop: true})
+        .add({
+          targets: '.heding .letter',
+          scale: [4,1],
+          opacity: [0,1],
+          translateZ: 0,
+          easing: "easeOutExpo",
+          duration: 950,
+          delay: (el, i) => 70*i
+        }).add({
+          targets: '.heding',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+    }, [])
+
 
 
   return (
@@ -130,7 +154,7 @@ const Categories = ({
             </div>
             <div className={styles.containerFooter}>
                 <h3> -50% </h3>
-                <h4> De remise sur les menus burgers </h4>
+                <h4 ref={animated} className='heding'> De remise sur les menus burgers </h4>
             </div>
         </div>
     </div>
