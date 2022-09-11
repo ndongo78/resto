@@ -1,6 +1,7 @@
 .container {
   max-width: 96%;
   margin:  auto;
+  background-color: #fbf5ee;
 }
 
 .main {
@@ -153,3 +154,18 @@
   margin:  auto;
 }
 
+.buttons {
+  background-color: #c23;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px;
+  letter-spacing: 1;
+  cursor: pointer;
+}
+.buttons:hover{
+  transform: scale(.9);
+}

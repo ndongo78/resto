@@ -16,6 +16,7 @@ export type SingleProduct = {
   sauces: string[];
 };
 
+
 export type Cart = {
   id: number;
   name: string;

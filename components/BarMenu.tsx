@@ -2,7 +2,7 @@ import React from 'react'
 import { AiOutlineArrowRight} from "react-icons/ai";
 import {GoSettings} from "react-icons/go";
 import Link from 'next/link'
-import styles from './all/All.module.css'
+import styles from './All.module.css'
 
 interface Props {
     title: string

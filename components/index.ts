@@ -1,10 +1,10 @@
-import {AllProduct} from './all/AllProduct';
-import {Burgers} from './burger/Burgers';
-import {Pizza} from './pizza/Pizza';
-import {Salad} from './salades/Salad';
+import {AllProduct} from './AllProduct';
+import {Burgers} from './Burgers';
+import {Pizza} from './Pizza';
+import {Salad} from './Salad';
 import {BarMenu} from './BarMenu';
-import {Desserts} from './desserts/Desserts';
-import {Drink} from './drink/Drink';
+import {Desserts} from './Desserts';
+import {Drink} from './Drink';
 import {FormInput} from './input/FormInput';
 import {Footer} from './Footer';
 
