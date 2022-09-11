@@ -16,7 +16,7 @@ export const Drink = () => {
     <BarMenu title='Nos boissons' icon={<GoSettings />} text="voir plus" icon2={<AiOutlineArrowRight />}  />
          <div className={styles.containerItem}>
            {
-            allProduct.map(item => <CardPlat item={item} />)
+            allProduct.map(item => <CardPlat item={item}  key={item.id}/>)
           }
       </div>
       </div>
