@@ -23,7 +23,7 @@ export const AllProduct = () => {
           icon2={<AiOutlineArrowRight />}
         />
         <div className={styles.containerItem}>
-          {allProduct.map((item) =><CardPlat item={item} /> )}
+          {allProduct.map((item) =><CardPlat item={item} key={item.id} /> )}
         </div>
       </div>
       {/* <article className={styles.articleItem}>
