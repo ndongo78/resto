@@ -19,7 +19,7 @@ export const Burgers = () => {
           icon2={<AiOutlineArrowRight />}
         />
         <div className={styles.containerItem}>
-          {Burger.map((item) => <CardPlat  item={item} />)}
+          {Burger.map((item) => <CardPlat  item={item} key={item.id} />)}
         </div>
       </div>
       {/* <article className={styles.articleItem}>

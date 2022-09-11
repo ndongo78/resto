@@ -19,7 +19,7 @@ export const Pizza = () => {
           icon2={<AiOutlineArrowRight />}
         />
         <div className={styles.containerItem}>
-          {pizza.map((item) => <CardPlat item={item} />)}
+          {pizza.map((item) => <CardPlat item={item}  key={item.id}/>)}
         </div>
       </div>
     </div>

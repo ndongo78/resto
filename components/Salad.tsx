@@ -19,7 +19,7 @@ export const Salad = () => {
           icon2={<AiOutlineArrowRight />}
         />
         <div className={styles.containerItem}>
-          {Salads.map((item) =><CardPlat item={item} />)}
+          {Salads.map((item) =><CardPlat item={item}  key={item.id}/>)}
         </div>
       </div>
     </div>
